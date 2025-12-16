@@ -3,11 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var number int
-	var continueLoop bool
-	for continueLoop = true; continueLoop; {
-		fmt.Scan(&number)
-		continueLoop = number <= 0
+	var x int
+	var y int
+	var selesai bool
+	fmt.Scan(&x, &y)
+	for selesai = false; !selesai; {
+		x = x - y
+		fmt.Println(x)
+		selesai = x <= 0
 	}
-	fmt.Printf("%d adalah bilangan bulat positif\n", number)
+	fmt.Println(x == 0)
 }
