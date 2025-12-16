@@ -1,16 +1,15 @@
 package main
-
 import "fmt"
-
-func main() {
-	var x int
-	var y int
-	var selesai bool
-	fmt.Scan(&x, &y)
-	for selesai = false; !selesai; {
-		x = x - y
-		fmt.Println(x)
-		selesai = x <= 0
+func main(){
+	var target,total,donasi int
+	var donatur int 
+	fmt.Scan(&target)
+	for target > total{
+		donatur ++
+		fmt.Print("donatur ", donatur," menyumbang sebesar: ")
+		fmt.Scan(&donasi)
+		total += donasi
+		fmt.Println("total donasi",total)
 	}
-	fmt.Println(x == 0)
+	fmt.Println("target tercapai total donasi: ",total,"dari ",donatur)
 }
