@@ -1,29 +1,23 @@
 package main
+
 import (
 	"fmt"
 	"math/rand"
 )
+
 func main(){
-	var n int
-	var x, y float32
-	var A,B,C,D float32
-	fmt.Scan(&n)
-	for i := 0; i < n; i++ {
-		x = rand.Float32()
-		y = rand.Float32()
-		if x < 0.5 && y < 0.5 {
-			A++
-		} else if x >= 0.5 && y < 0.5 {
-			B++
-		} else if x >= 0.5 && y >= 0.5 {
-			C++
-		} else if x < 0.5 && y >= 0.5 {
-			D++
+	var toping,topingpadapizza int
+	fmt.Scan(&toping)
+	var xc, yc, r float32 = 0.5, 0.5, 0.5
+	for i := 0; i < toping; i++ {
+		var x, y float32 = rand.Float32(),rand.Float32()
+		dx := x - xc
+		dy := y - yc
+		if (dx*dx + dy*dy) <= r*r{
+			topingpadapizza++
 		}
 	}
-	fmt.Printf("Daerah A: %f tetes (%.4f ml)\n", A, float64(A)*0.0001)
-	fmt.Printf("Daerah B: %f tetes (%.4f ml)\n", B, float64(B)*0.0001)
-	fmt.Printf("Daerah C: %f tetes (%.4f ml)\n", C, float64(C)*0.0001)
-	fmt.Printf("Daerah D: %f tetes (%.4f ml)\n", D, float64(D)*0.0001)
-
+	var pi float32 = 4*float32(topingpadapizza)/float32(toping)
+	fmt.Println("toping pada pizza: ",topingpadapizza)
+	fmt.Println("phi :",pi)
 }
