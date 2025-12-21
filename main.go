@@ -1,8 +1,9 @@
 package main
 import "fmt"
 func main(){
-	var apa = [...]string{"apel","jeruk","melon"}
-	for i, apakek := range apa{
-		fmt.Print(i,apakek)
-	}
+	var buah = []string {"apel","nanas","jeruk"}
+	fmt.Print(buah[:])
+	var bbuah = buah[:]
+	bbuah[0] = "pepaya"
+	fmt.Print(bbuah)
 }
