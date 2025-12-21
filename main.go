@@ -1,15 +1,11 @@
 package main
+
 import "fmt"
 func main(){
-	var buah = []string {"apel","nanas","jeruk","melon","semangka"}
-	fmt.Println(buah[:])
-	var bbuah = buah[0:3]
-	bbuah[0] = "pepaya"
-	var buuah = buah 
-	buuah = append(buuah,"pir")
-	fmt.Println(bbuah)
-	fmt.Println(len(buah))
-	fmt.Println(cap(buah))
-	fmt.Println(len(bbuah))
-	fmt.Println(cap(bbuah))
+	type apa string
+	var angka string
+	fmt.Scan(&angka)
+	var digit = angka[0]
+	var sdigit = string(digit)
+	fmt.Print(sdigit)
 }
