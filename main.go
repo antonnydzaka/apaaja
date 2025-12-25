@@ -10,6 +10,7 @@ func main() {
 		"cap":  "topi",
 		"hight":"tinggi",
 		"dog":"anjing",
+		"book":"buku",
 	}
 	fmt.Scan(&input)
 	var value,ada = translate[input]
