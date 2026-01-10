@@ -1,18 +1,23 @@
-package main 
+package main
 import "fmt"
 func main(){
-	var min,max  int = 0,100
-	var jawab bool
-	fmt.Println("tebak angka, pikir kan angka dari 0 sampai 100")
-	for min != max {
-		var mid int = (min+max)/2
-		fmt.Println("apakah nilai  lebih besar dari ",mid,"[true/false]")
-		fmt.Scan(&jawab)
-		if jawab{
-			min = mid + 1
-		}else{
-			max = mid 
+	var poin int 
+	var hasil bool = false
+	var i int 
+	var pertandingan int = 0
+	for i != 5{
+		fmt.Scan(&poin)
+		if poin > 500{
+			hasil = true
+			break
 		}
+		if poin > 0{
+			pertandingan += 1
+		}
+		i++
 	}
-	fmt.Println("apakah ini angka yang anda pikirkan :",min)
+	if pertandingan == 5{
+		hasil = true
+	}
+	fmt.Print(hasil)
 }
