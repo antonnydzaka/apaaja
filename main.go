@@ -19,5 +19,5 @@ func main(){
 	if pertandingan == 5{
 		hasil = true
 	}
-	fmt.Print(hasil)
+	fmt.Println(hasil)
 }
