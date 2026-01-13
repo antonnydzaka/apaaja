@@ -1,23 +1,29 @@
 package main
 import "fmt"
 func main(){
-	var poin int 
-	var hasil bool = false
-	var i int 
-	var pertandingan int = 0
-	for i != 5{
-		fmt.Scan(&poin)
-		if poin > 500{
-			hasil = true
-			break
+	var min,max int = 0,100
+	var jawab bool
+	fmt.Println("--selamaat datang--")
+	fmt.Println("--pikirkan angka 0 sampai 100--")
+	fmt.Println("--press enter--")
+	fmt.Scanln( )
+	for min != max{
+		var x int = (min+max)/2
+		fmt.Println("apakah angka lebih besar dari ",x)
+		fmt.Println("[true/false]")
+		fmt.Scan(&jawab)
+		if jawab{
+			min = x + 1
+		}else{
+			max = x
 		}
-		if poin > 0{
-			pertandingan += 1
-		}
-		i++
 	}
-	if pertandingan == 5{
-		hasil = true
+	fmt.Println("apakah memikirkan angka ",min,"[true/flase]")
+	var terakhir bool
+	fmt.Scan(&terakhir)
+	if terakhir{
+		fmt.Println("horee")
+	}else{
+		fmt.Println("yahh salah")
 	}
-	fmt.Println(hasil)
 }
