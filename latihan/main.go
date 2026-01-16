@@ -1,14 +1,18 @@
-package main 
+package main
+
 import "fmt"
-func main (){
-	var avg = ratarata(1,2,3,4,5,6,7,4,3,2,2)
-	fmt.Print(avg)
+
+func main(){
+	var angka =[]int{1,2,3,4,5,6,7,8,9,10}
+	afterfilter := filter(angka)
+	fmt.Print(afterfilter)
 }
-func ratarata(vels...int)float32{
-	var total int 
-	for _,vel:= range vels{
-		total += vel
+func filter(angka []int)[]int{
+	var hasil = []int{}
+	for _,val  := range angka{
+		if val % 2 == 0{
+			hasil = append(hasil,val)
+		}
 	}
-	var avg float32= float32(total)/float32(len(vels))
-	return avg
+	return hasil
 }
